@@ -13,8 +13,8 @@ defmodule Chatter do
       # Start the endpoint when the application starts
       supervisor(Chatter.Endpoint, []),
       # Start your own worker by calling: Chatter.Worker.start_link(arg1, arg2, arg3)
-      # worker(Chatter.Worker, [arg1, arg2, arg3]),
       supervisor(Chatter.Presence, []),
+      # worker(Chatter.Worker, [arg1, arg2, arg3]),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
